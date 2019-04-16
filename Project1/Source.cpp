@@ -6,7 +6,7 @@
 #include <sstream>
 #include "map.h"
 #include "view.h"
-#include "interactionWithUnit.h"
+//#include "interactionWithUnit.h"
 
 using namespace std;
 using namespace sf;
@@ -32,7 +32,7 @@ private: float x, y;
 		void update(float time) {
 			for (int i = x; i < x + w; i++) {
 				for (int j = y; j < y + h; j++) {
-					MapUnit[i][j] = 0;
+//					MapUnit[i][j] = 0;
 				}
 
 			}
@@ -51,7 +51,7 @@ private: float x, y;
 
 			interactionWithMap();
 			//interactionWithUnit(dir);
-			setUnit(x, y, w, h);
+//			setUnit(x, y, w, h);
 			speed = 0;
 
 			sprite.setPosition(x, y);
@@ -140,7 +140,7 @@ int main() {
 	Player t("tank.png", 1181, 701, 66.0, 66.0);
 	getplayer0coordinateforview(t.getplayercoordinateX(), t.getplayercoordinateY());
 	getplayer1coordinateforview(p.getplayercoordinateX(), p.getplayercoordinateY());
-	GenerateUnit();
+//	GenerateUnit();
 	while (window.isOpen()) {
 		float time = clock.getElapsedTime().asMicroseconds();
 		clock.restart();
